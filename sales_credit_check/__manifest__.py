@@ -1,0 +1,25 @@
+{
+    'name': 'Sales Credit Check',
+    'version': '1.0',
+    'website': "https://iprogrammer.com/",
+    'maintainer': "iProgrammer Solutions Private Limited <sales@iprogrammer.com>",
+    "author": "iProgrammer Solution",
+    "description": """Sales Credit Check Functionality""",
+    'sequence': 1,
+    'category': 'Sales',
+    'summary': 'Credit limit control for Sales and Invoicing',
+    'depends': [
+        'base',
+        'sale_management',
+        'account',
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/res_partner_view.xml',
+        'views/sale_order_view.xml',
+        'wizard/credit_limit_warning_wizard_view.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+    "license": "LGPL-3",
+}

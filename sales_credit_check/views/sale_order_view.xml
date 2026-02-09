@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale_order_form_inherit_credit_limit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.credit.limit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <button name="action_open_credit_limit_wizard"
+                        type="object"
+                        string="Credit limit not set – click to review"
+                        class="o_hidden_credit_limit_button btn btn-warning mt-3"
+                        invisible="not show_credit_limit_button"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
